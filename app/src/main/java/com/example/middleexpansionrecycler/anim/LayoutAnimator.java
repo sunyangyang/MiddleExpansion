@@ -53,7 +53,7 @@ public class LayoutAnimator {
 
     public static Animator ofHeight(View view, int start, int end, int transY, View parent, View expandView) {
         final ValueAnimator animator = ValueAnimator.ofInt(start, end);
-        animator.setDuration(400);
+        animator.setDuration(1000);
         animator.setInterpolator(new AccelerateDecelerateInterpolator());
         animator.addUpdateListener(new LayoutHeightUpdateListener(view, transY, start, Math.abs(end - start), parent, expandView));
         return animator;

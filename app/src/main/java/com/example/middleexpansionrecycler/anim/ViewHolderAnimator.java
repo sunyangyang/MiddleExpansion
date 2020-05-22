@@ -7,8 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.middleexpansionrecycler.anim.LayoutAnimator;
-import com.example.middleexpansionrecycler.utils.Utils;
+import com.example.middleexpansionrecycler.R;
 
 public class ViewHolderAnimator {
 
@@ -62,7 +61,8 @@ public class ViewHolderAnimator {
         int start = holder.itemView.getMeasuredHeight();
         holder.itemView.measure(View.MeasureSpec.makeMeasureSpec(parent.getMeasuredWidth(), View.MeasureSpec.AT_MOST), View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
         int end = holder.itemView.getMeasuredHeight();
-        int transY = isOpen ? -position * Utils.dip2px(holder.itemView.getContext(), 70) : position * Utils.dip2px(holder.itemView.getContext(), 70);
+        int titleHeight = holder.itemView.getContext().getResources().getDimensionPixelSize(R.dimen.title_height);
+        int transY = isOpen ? -position * titleHeight : position * titleHeight;
         final Animator animator = LayoutAnimator.ofHeight(holder.itemView, start, end, transY, parent, expandView);
         animator.addListener(new ViewHolderAnimatorListener(holder));
 

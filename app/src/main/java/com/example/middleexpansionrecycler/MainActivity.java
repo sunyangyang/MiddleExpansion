@@ -1,6 +1,5 @@
 package com.example.middleexpansionrecycler;
 
-
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -104,12 +103,9 @@ public class MainActivity extends AppCompatActivity {
                 mList.add(bean);
             }
         }
-
         mAdapter.notifyDataSetChanged();
-
     }
 
-    //初始化View
     private void initView() {
         mRecycler = findViewById(R.id.mRecycler);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false) {
