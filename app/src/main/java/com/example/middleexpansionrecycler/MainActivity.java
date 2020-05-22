@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             "\"link\": \"5月7日:大风\"\n" +
             "}, {\n" +
             "\"title\": \"5月8日\",\n" +
-            "\"link\": \"5月7日:大风\"\n" +
+            "\"link\": \"5月8日:大风\"\n" +
             "}, {\n" +
             "\"title\": \"5月9日\",\n" +
             "\"link\": \"5月9日:多云转晴\"\n" +
